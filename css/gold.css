@@ -1,0 +1,429 @@
+.gold-hero {
+  height: 70vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/images/backgrounds/b05.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: background 0.5s ease-in-out;
+  filter: contrast(1.2) brightness(1.1) saturate(1.2);
+}
+
+.gold-hero .hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: var(--gold-primary);
+  text-shadow: 0 2px 10px rgba(212, 175, 55, 0.6);
+  transition: all 0.3s ease;
+}
+
+.gold-hero .hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: var(--text-light);
+  transition: all 0.3s ease;
+}
+
+.gold-intro {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/images/backgrounds/b04.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  transition: background 0.5s ease-in-out;
+  filter: contrast(1.15) brightness(1.02) saturate(1.1);
+}
+
+.gold-intro h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--gold-primary);
+  text-shadow: 0 2px 10px rgba(212, 175, 55, 0.6);
+  transition: all 0.3s ease;
+}
+
+.gold-intro p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  font-size: 1.1rem;
+  color: var(--text-light);
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+}
+
+.gold-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feature-item {
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  border-left: 4px solid var(--gold-primary);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.feature-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--gold-primary);
+  transition: all 0.3s ease;
+}
+
+.feature-item p {
+  color: var(--text-light);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+}
+
+.gold-process {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/images/backgrounds/b02.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background 0.5s ease-in-out;
+  filter: contrast(1.15) brightness(1.05) saturate(1.15);
+}
+
+.gold-process h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--gold-primary);
+  transition: all 0.3s ease;
+}
+
+.gold-process p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.step-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.step-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--gold-primary);
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto 1rem;
+}
+
+.step-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--gold-primary);
+}
+
+.gold-application {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/backgrounds/b03.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  transition: background 0.5s ease-in-out;
+  filter: contrast(1.1) brightness(1.05) saturate(1.1);
+}
+
+.gold-application h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--gold-primary);
+  text-shadow: 0 2px 10px rgba(212, 175, 55, 0.6);
+  transition: all 0.3s ease;
+}
+
+.gold-application p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  font-size: 1.1rem;
+  color: var(--text-light);
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+}
+
+.application-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.application-item {
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  border-top: 4px solid var(--gold-primary);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.application-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.application-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--gold-primary);
+  transition: all 0.3s ease;
+}
+
+.application-item p {
+  color: var(--text-light);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+}
+
+.gold-interactive {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/images/backgrounds/b06.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding: 4rem 0;
+  transition: background 0.5s ease-in-out;
+  filter: contrast(1.15) brightness(1.02) saturate(1.1);
+}
+
+.gold-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.gold-main {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2rem;
+  align-items: start;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  padding: 2rem;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.canvas-container {
+  width: 100%;
+  height: 600px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.gold-ui {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  padding: 2rem;
+  border: 1px solid var(--gold-primary);
+  backdrop-filter: blur(10px);
+}
+
+.gold-ui h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--gold-primary);
+  text-align: center;
+  text-shadow: 0 2px 10px rgba(212, 175, 55, 0.6);
+  transition: all 0.3s ease;
+}
+
+.gold-ui p {
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--text-light);
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+}
+
+.counter-box {
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+#hit-count {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--gold-primary);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+#progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold-primary), var(--gold-light));
+  transition: width 0.3s ease;
+  border-radius: 10px;
+}
+
+#reset-btn {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: 2px solid var(--gold-primary);
+  color: var(--gold-primary);
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+#reset-btn:hover {
+  background: var(--gold-primary);
+  color: var(--text-dark);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+#message {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--gold-primary);
+  min-height: 30px;
+}
+
+@media (max-width: 768px) {
+  .gold-hero {
+    background-attachment: scroll;
+  }
+  
+  .gold-process {
+    background-attachment: scroll;
+  }
+  
+  .gold-application {
+    background-attachment: scroll;
+  }
+  
+  .gold-intro {
+    background-attachment: scroll;
+  }
+  
+  .gold-interactive {
+    background-attachment: scroll;
+  }
+  
+  .gold-hero .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .gold-hero .hero-content p {
+    font-size: 1.1rem;
+  }
+  
+  .gold-intro h2,
+  .gold-process h2,
+  .gold-application h2 {
+    font-size: 2rem;
+  }
+  
+  .gold-features,
+  .process-steps,
+  .application-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .gold-main {
+    grid-template-columns: 1fr;
+  }
+  
+  .canvas-container {
+    height: 400px;
+  }
+}
+
+/* 优化图片加载性能 */
+@media (prefers-reduced-motion: reduce) {
+  .gold-hero,
+  .gold-process,
+  .gold-application,
+  .gold-intro,
+  .gold-interactive {
+    background-attachment: scroll;
+  }
+}
+
+/* 确保背景图在不同屏幕比例下都能良好显示 */
+@media (orientation: portrait) {
+  .gold-hero {
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .gold-process {
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .gold-application {
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .gold-intro {
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .gold-interactive {
+    background-size: cover;
+    background-position: center;
+  }
+}

@@ -1,0 +1,242 @@
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../assets/images/backgrounds/a01.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: background 0.5s ease-in-out;
+  filter: contrast(1.1) brightness(1.05) saturate(1.1);
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: var(--text-light);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--text-light);
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.intro {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/images/backgrounds/a02.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  transition: background 0.5s ease-in-out;
+  filter: contrast(1.15) brightness(1.02) saturate(1.1);
+}
+
+.intro h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text-light);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+}
+
+.intro p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  font-size: 1.1rem;
+  color: var(--text-light);
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+}
+
+.treasures-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.treasure-item {
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.treasure-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.treasure-image {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 3px solid var(--gold-primary);
+  transition: all 0.3s ease;
+}
+
+.treasure-image.gold {
+  background: linear-gradient(45deg, var(--gold-primary), var(--gold-light));
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+}
+
+.treasure-image.brocade {
+  background: linear-gradient(45deg, var(--brocade-red), var(--brocade-blue));
+  box-shadow: 0 0 30px rgba(157, 41, 51, 0.5);
+}
+
+.treasure-image.stone {
+  background: linear-gradient(45deg, var(--stone-green), var(--stone-cream));
+  box-shadow: 0 0 30px rgba(92, 122, 107, 0.5);
+}
+
+.treasure-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--gold-primary);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+}
+
+.treasure-item p {
+  margin-bottom: 1.5rem;
+  text-align: left;
+  color: var(--text-light);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+}
+
+.treasure-item .btn {
+  margin-top: 1rem;
+}
+
+.culture {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/images/backgrounds/a03.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  text-align: center;
+  transition: background 0.5s ease-in-out;
+  filter: contrast(1.1) brightness(1.08) saturate(1.15);
+}
+
+.culture h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--text-light);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+}
+
+.culture p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-light);
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 2rem 0;
+  text-align: center;
+  border-top: 1px solid var(--gold-primary);
+}
+
+footer p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll;
+  }
+  
+  .intro {
+    background-attachment: scroll;
+  }
+  
+  .culture {
+    background-attachment: scroll;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .intro h2,
+  .culture h2 {
+    font-size: 2rem;
+  }
+  
+  .treasures-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .treasure-image {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* 优化图片加载性能 */
+@media (prefers-reduced-motion: reduce) {
+  .hero,
+  .intro,
+  .culture {
+    background-attachment: scroll;
+  }
+}
+
+/* 确保背景图在不同屏幕比例下都能良好显示 */
+@media (orientation: portrait) {
+  .hero {
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .intro {
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .culture {
+    background-size: cover;
+    background-position: center;
+  }
+}

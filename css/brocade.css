@@ -1,0 +1,721 @@
+.brocade-hero {
+  height: 70vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/backgrounds/c01.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: background 0.5s ease-in-out;
+  filter: contrast(1.1) brightness(1.05) saturate(1.1);
+}
+
+.brocade-hero .hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: var(--brocade-red);
+  text-shadow: 0 2px 10px rgba(157, 41, 51, 0.5);
+}
+
+.brocade-hero .hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: var(--text-light);
+}
+
+.brocade-intro {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/backgrounds/c02.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  transition: background 0.5s ease-in-out;
+  filter: contrast(1.1) brightness(1.05) saturate(1.1);
+}
+
+.brocade-intro h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--brocade-red);
+  text-shadow: 0 2px 10px rgba(157, 41, 51, 0.6);
+  transition: all 0.3s ease;
+}
+
+.brocade-intro p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  font-size: 1.1rem;
+  color: var(--text-light);
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+}
+
+.brocade-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feature-item {
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  border-left: 4px solid var(--brocade-red);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(157, 41, 51, 0.3);
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.feature-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--brocade-red);
+  transition: all 0.3s ease;
+}
+
+.feature-item p {
+  color: var(--text-light);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+}
+
+.brocade-process {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/images/backgrounds/c05.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  transition: background 0.5s ease-in-out;
+  filter: contrast(1.15) brightness(1.05) saturate(1.15);
+}
+
+.brocade-process h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--brocade-red);
+  text-shadow: 0 2px 10px rgba(157, 41, 51, 0.6);
+  transition: all 0.3s ease;
+}
+
+.brocade-process p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  font-size: 1.1rem;
+  color: var(--text-light);
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.step-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.step-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(157, 41, 51, 0.2);
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--brocade-red);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto 1rem;
+}
+
+.step-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--brocade-red);
+}
+
+.brocade-patterns {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/backgrounds/c06.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  transition: background 0.5s ease-in-out;
+  filter: contrast(1.1) brightness(1.05) saturate(1.1);
+}
+
+.brocade-patterns h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--brocade-red);
+  text-shadow: 0 2px 10px rgba(157, 41, 51, 0.6);
+  transition: all 0.3s ease;
+}
+
+.brocade-patterns p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  font-size: 1.1rem;
+  color: var(--text-light);
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+}
+
+.patterns-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.pattern-item {
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  border-top: 4px solid var(--brocade-red);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pattern-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(157, 41, 51, 0.3);
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.pattern-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--brocade-red);
+  transition: all 0.3s ease;
+}
+
+.pattern-item p {
+  color: var(--text-light);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+}
+
+.brocade-drawing {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/images/backgrounds/c04.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding: 4rem 0;
+  transition: background 0.5s ease-in-out;
+  filter: contrast(1.15) brightness(1.02) saturate(1.1);
+}
+
+.brocade-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.brocade-main {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2rem;
+  align-items: start;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  padding: 2rem;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.canvas-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#draw-canvas {
+  width: 100%;
+  max-width: 600px;
+  height: 600px;
+  background-color: #F5F1E9;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  cursor: crosshair;
+  transition: all 0.3s ease;
+}
+
+.tool-area {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  padding: 2rem;
+  border: 1px solid var(--brocade-red);
+  backdrop-filter: blur(10px);
+}
+
+.tool-area h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1.8rem;
+  color: var(--brocade-red);
+  text-align: center;
+  text-shadow: 0 2px 10px rgba(157, 41, 51, 0.6);
+  transition: all 0.3s ease;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.color-picker {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.color-option {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.color-option:hover {
+  transform: scale(1.1);
+}
+
+.color-option.active {
+  border: 2px solid var(--gold-primary);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+.brush-size {
+  margin-bottom: 2.2rem;
+}
+
+#size-slider {
+  width: 100%;
+  margin-bottom: 0.8rem;
+}
+
+#size-value {
+  display: block;
+  text-align: center;
+  color: var(--text-light);
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+#clear-btn,
+#generate-btn {
+  width: 100%;
+  padding: 14px;
+  background: transparent;
+  border: 2px solid var(--brocade-red);
+  color: var(--brocade-red);
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1.2rem;
+}
+
+#clear-btn:hover,
+#generate-btn:hover {
+  background: var(--brocade-red);
+  color: var(--text-light);
+  box-shadow: 0 4px 15px rgba(157, 41, 51, 0.3);
+}
+
+#result-area {
+  margin-top: 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 2rem;
+  border: 1px solid var(--brocade-red);
+}
+
+#result-area h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1.8rem;
+  color: var(--brocade-red);
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 10px rgba(157, 41, 51, 0.6);
+  transition: all 0.3s ease;
+}
+
+#result-display {
+  width: 100%;
+  min-height: 600px;
+  background-color: #F5F1E9;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-dark);
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+}
+
+/* 绘画体验云锦纹样功能样式 */
+.brocade-experience {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/images/backgrounds/c03.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding: 4rem 0;
+  transition: background 0.5s ease-in-out;
+  filter: contrast(1.15) brightness(1.02) saturate(1.1);
+}
+
+.experience-main {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 2rem;
+  align-items: start;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  padding: 2rem;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.experience-canvas-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#experience-draw-canvas {
+  width: 100%;
+  max-width: 800px;
+  height: 600px;
+  background-color: #F5F1E9;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  cursor: crosshair;
+  transition: all 0.3s ease;
+}
+
+.experience-tool-area {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  padding: 2rem;
+  border: 1px solid var(--brocade-red);
+  backdrop-filter: blur(10px);
+}
+
+.experience-tool-area h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1.8rem;
+  color: var(--brocade-red);
+  text-align: center;
+  text-shadow: 0 2px 10px rgba(157, 41, 51, 0.6);
+  transition: all 0.3s ease;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.experience-color-picker {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.experience-color-option {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.experience-color-option:hover {
+  transform: scale(1.15);
+}
+
+.experience-color-option.active {
+  border: 3px solid var(--gold-primary);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+}
+
+.experience-color-option .color-label {
+  position: absolute;
+  bottom: -24px;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  white-space: nowrap;
+}
+
+.experience-brush-size {
+  margin-bottom: 2rem;
+}
+
+.experience-brush-size label {
+  display: block;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+#experience-size-slider {
+  width: 100%;
+}
+
+.experience-area-info {
+  margin-bottom: 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.experience-area-info h4 {
+  color: var(--brocade-red);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.area-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.area-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.area-color-indicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.experience-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.experience-buttons button {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: 2px solid var(--brocade-red);
+  color: var(--brocade-red);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.experience-buttons button:hover:not(:disabled) {
+  background: var(--brocade-red);
+  color: var(--text-light);
+  box-shadow: 0 4px 15px rgba(157, 41, 51, 0.3);
+}
+
+.experience-buttons button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.experience-result-display {
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  padding: 2rem;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+}
+
+.experience-result-controls {
+  margin-top: 1rem;
+}
+
+#experience-download-btn {
+  padding: 12px 24px;
+  background: var(--brocade-red);
+  color: var(--text-light);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#experience-download-btn:hover {
+  background: #7a222a;
+  box-shadow: 0 4px 15px rgba(157, 41, 51, 0.4);
+}
+
+#experience-status-message {
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+#experience-status-message.loading {
+  background: rgba(212, 175, 55, 0.2);
+  border: 1px solid var(--gold-primary);
+  color: var(--gold-primary);
+}
+
+#experience-status-message.success {
+  background: rgba(46, 90, 76, 0.2);
+  border: 1px solid var(--stone-green);
+  color: var(--stone-green);
+}
+
+#experience-status-message.error {
+  background: rgba(157, 41, 51, 0.2);
+  border: 1px solid var(--brocade-red);
+  color: var(--brocade-red);
+}
+
+@media (max-width: 768px) {
+  .brocade-hero {
+    background-attachment: scroll;
+  }
+  
+  .brocade-intro {
+    background-attachment: scroll;
+  }
+  
+  .brocade-process {
+    background-attachment: scroll;
+  }
+  
+  .brocade-patterns {
+    background-attachment: scroll;
+  }
+  
+  .brocade-drawing {
+    background-attachment: scroll;
+  }
+  
+  .brocade-experience {
+    background-attachment: scroll;
+  }
+  
+  .brocade-hero .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .brocade-hero .hero-content p {
+    font-size: 1.1rem;
+  }
+  
+  .brocade-intro h2,
+  .brocade-process h2,
+  .brocade-patterns h2 {
+    font-size: 2rem;
+  }
+  
+  .brocade-features,
+  .process-steps,
+  .patterns-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .brocade-main {
+    grid-template-columns: 1fr;
+  }
+  
+  .experience-main {
+    grid-template-columns: 1fr;
+  }
+  
+  #draw-canvas,
+  #experience-draw-canvas {
+    width: 100%;
+    max-width: 100%;
+    height: 500px;
+  }
+}
+
+/* 优化图片加载性能 */
+@media (prefers-reduced-motion: reduce) {
+  .brocade-hero,
+  .brocade-intro,
+  .brocade-process,
+  .brocade-patterns,
+  .brocade-drawing {
+    background-attachment: scroll;
+  }
+}
+
+/* 确保背景图在不同屏幕比例下都能良好显示 */
+@media (orientation: portrait) {
+  .brocade-hero {
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .brocade-intro {
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .brocade-process {
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .brocade-patterns {
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .brocade-drawing {
+    background-size: cover;
+    background-position: center;
+  }
+}

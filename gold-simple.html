@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>金箔 | 南京三宝</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gold.css">
+    <style>
+        #canvas-container {
+            width: 800px;
+            height: 600px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">金陵三宝</div>
+        <ul class="nav-links">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="brocade.html">云锦</a></li>
+        </ul>
+    </nav>
+
+    <header class="gold-hero">
+        <div class="hero-content">
+            <h1>南京金箔</h1>
+            <p>千年技艺，黄金之美</p>
+        </div>
+    </header>
+
+    <section class="gold-interactive">
+        <div class="gold-container">
+            <div class="gold-main">
+                <div id="canvas-container" class="canvas-container"></div>
+                <div class="gold-ui">
+                    <h2>千锤成莲</h2>
+                    <p>点击金箔捶打，十次化莲</p>
+                    <div class="counter-box">
+                        <span id="hit-count">0</span> / 10
+                    </div>
+                    <div class="progress-bar">
+                        <div id="progress-fill" style="width:0%"></div>
+                    </div>
+                    <button id="reset-btn">重新开始</button>
+                    <div id="message"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 南京三宝文化互动展示网站. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.128.0/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+
+    <script>
+        console.log('Gold page loaded');
+        
+        window.addEventListener('DOMContentLoaded', function() {
+            console.log('DOMContentLoaded fired');
+            
+            const canvasContainer = document.getElementById('canvas-container');
+            console.log('Canvas container:', canvasContainer);
+            
+            if (canvasContainer) {
+                console.log('Initializing Three.js scene');
+                
+                // 场景
+                const scene = new THREE.Scene();
+                scene.background = new THREE.Color(0x111111);
+                
+                // 相机
+                const camera = new THREE.PerspectiveCamera(45, canvasContainer.clientWidth / canvasContainer.clientHeight, 0.1, 1000);
+                camera.position.set(3, 2, 5);
+                
+                // 渲染器
+                const renderer = new THREE.WebGLRenderer({ antialias: true });
+                renderer.setSize(canvasContainer.clientWidth, canvasContainer.clientHeight);
+                canvasContainer.appendChild(renderer.domElement);
+                
+                // 灯光
+                const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
+                scene.add(ambientLight);
+                
+                const pointLight = new THREE.PointLight(0xffeedd, 1.5);
+                pointLight.position.set(5, 5, 5);
+                scene.add(pointLight);
+                
+                // 控制器
+                const controls = new THREE.OrbitControls(camera, renderer.domElement);
+                controls.enableDamping = true;
+                controls.dampingFactor = 0.05;
+                
+                // 金箔基底
+                const baseGeometry = new THREE.PlaneGeometry(4, 4);
+                const baseMaterial = new THREE.MeshPhongMaterial({ 
+                    color: 0xD4AF37, 
+                    shininess: 100,
+                    side: THREE.DoubleSide
+                });
+                const base = new THREE.Mesh(baseGeometry, baseMaterial);
+                base.rotation.x = -Math.PI / 2;
+                scene.add(base);
+                
+                // 金箔碎片
+                const fragments = [];
+                const fragmentCount = 60;
+                
+                for (let i = 0; i < fragmentCount; i++) {
+                    const size = Math.random() * 0.2 + 0.1;
+                    const geometry = new THREE.TetrahedronGeometry(size);
+                    const material = new THREE.MeshPhongMaterial({ 
+                        color: 0xD4AF37, 
+                        shininess: 100,
+                        metalness: 0.8
+                    });
+                    const fragment = new THREE.Mesh(geometry, material);
+                    
+                    fragment.position.x = (Math.random() - 0.5) * 4;
+                    fragment.position.y = Math.random() * 0.5 + 0.1;
+                    fragment.position.z = (Math.random() - 0.5) * 4;
+                    
+                    fragment.rotation.x = Math.random() * Math.PI * 2;
+                    fragment.rotation.y = Math.random() * Math.PI * 2;
+                    fragment.rotation.z = Math.random() * Math.PI * 2;
+                    
+                    scene.add(fragment);
+                    fragments.push(fragment);
+                }
+                
+                // 交互
+                let hitCount = 0;
+                const maxHits = 10;
+                const hitCountElement = document.getElementById('hit-count');
+                const progressFillElement = document.getElementById('progress-fill');
+                const messageElement = document.getElementById('message');
+                const resetBtn = document.getElementById('reset-btn');
+                
+                // 射线检测
+                const raycaster = new THREE.Raycaster();
+                const mouse = new THREE.Vector2();
+                
+                function onMouseClick(event) {
+                    const rect = canvasContainer.getBoundingClientRect();
+                    mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+                    mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+                    
+                    raycaster.setFromCamera(mouse, camera);
+                    const intersects = raycaster.intersectObjects(fragments);
+                    
+                    if (intersects.length > 0 && hitCount < maxHits) {
+                        hitCount++;
+                        hitCountElement.textContent = hitCount;
+                        
+                        const progress = (hitCount / maxHits) * 100;
+                        progressFillElement.style.width = `${progress}%`;
+                        
+                        // 碎片闪烁
+                        const clickedFragment = intersects[0].object;
+                        const originalColor = clickedFragment.material.color.clone();
+                        clickedFragment.material.color.set(0xffffff);
+                        setTimeout(() => {
+                            clickedFragment.material.color.copy(originalColor);
+                        }, 200);
+                        
+                        // 整体震动
+                        fragments.forEach(fragment => {
+                            const originalPosition = fragment.position.clone();
+                            fragment.position.x += (Math.random() - 0.5) * 0.1;
+                            fragment.position.y += (Math.random() - 0.5) * 0.1;
+                            fragment.position.z += (Math.random() - 0.5) * 0.1;
+                            setTimeout(() => {
+                                fragment.position.copy(originalPosition);
+                            }, 200);
+                        });
+                        
+                        if (hitCount === maxHits) {
+                            messageElement.textContent = '莲花已成！';
+                        }
+                    }
+                }
+                
+                // 重置功能
+                resetBtn.addEventListener('click', function() {
+                    hitCount = 0;
+                    hitCountElement.textContent = hitCount;
+                    progressFillElement.style.width = '0%';
+                    messageElement.textContent = '';
+                    
+                    fragments.forEach(fragment => {
+                        fragment.position.x = (Math.random() - 0.5) * 4;
+                        fragment.position.y = Math.random() * 0.5 + 0.1;
+                        fragment.position.z = (Math.random() - 0.5) * 4;
+                        
+                        fragment.rotation.x = Math.random() * Math.PI * 2;
+                        fragment.rotation.y = Math.random() * Math.PI * 2;
+                        fragment.rotation.z = Math.random() * Math.PI * 2;
+                    });
+                });
+                
+                canvasContainer.addEventListener('click', onMouseClick);
+                
+                // 动画循环
+                function animate() {
+                    requestAnimationFrame(animate);
+                    controls.update();
+                    renderer.render(scene, camera);
+                }
+                
+                // 响应窗口大小变化
+                function onWindowResize() {
+                    const width = canvasContainer.clientWidth;
+                    const height = canvasContainer.clientHeight;
+                    camera.aspect = width / height;
+                    camera.updateProjectionMatrix();
+                    renderer.setSize(width, height);
+                }
+                
+                window.addEventListener('resize', onWindowResize);
+                animate();
+                
+                console.log('Three.js scene initialized successfully');
+            } else {
+                console.error('Canvas container not found');
+            }
+        });
+    </script>
+</body>
+</html>

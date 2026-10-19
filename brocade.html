@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>云锦 | 南京云锦</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/brocade.css">
+    <script src="https://cdn.jsdelivr.net/npm/stats.js@0.17.0/build/stats.min.js"></script>
+    <script src="js/three-setup.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">金陵云锦</div>
+        <ul class="nav-links">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="brocade.html" class="active">云锦</a></li>
+            <li><a href="experience.html">文化体验</a></li>
+        </ul>
+    </nav>
+
+    <header class="brocade-hero">
+        <div class="hero-content">
+            <h1>南京云锦</h1>
+            <p>千年丝织，皇家贡品</p>
+        </div>
+    </header>
+
+    <section class="brocade-intro">
+        <div class="container">
+            <h2>云锦简介</h2>
+            <p>南京云锦是中国传统丝织工艺的杰出代表，有着1600多年的历史。云锦以其绚丽多彩、质地厚重而闻名，是皇家御用贡品，被誉为"东方瑰宝"。</p>
+            
+            <div class="brocade-features">
+                <div class="feature-item">
+                    <h3>历史悠久</h3>
+                    <p>南京云锦的历史可以追溯到东晋时期，经过千年的发展，形成了独特的制作工艺和文化内涵。</p>
+                </div>
+                <div class="feature-item">
+                    <h3>工艺精湛</h3>
+                    <p>南京云锦的制作需要经过多道工序，包括设计、染色、织造等，每一道工序都需要工匠的精心操作。</p>
+                </div>
+                <div class="feature-item">
+                    <h3>图案精美</h3>
+                    <p>南京云锦的图案丰富多彩，包括花卉、鸟兽、人物等，寓意吉祥如意，展现了中国传统文化的博大精深。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="brocade-process">
+        <div class="container">
+            <h2>制作工艺</h2>
+            <p>南京云锦的制作工艺复杂精细，需要经过多道工序，每一道工序都需要工匠的精心操作。</p>
+            
+            <div class="process-steps">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h3>设计</h3>
+                    <p>根据需要设计云锦的图案和色彩，绘制出详细的设计稿。</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h3>染色</h3>
+                    <p>将丝线染成所需的颜色，确保色彩鲜艳、持久。</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h3>准备</h3>
+                    <p>将丝线整理好，准备织造。</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <h3>织造</h3>
+                    <p>使用传统的大花楼木织机进行织造，需要两名工匠配合操作。</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">5</div>
+                    <h3>整理</h3>
+                    <p>将织好的云锦进行整理、裁剪等处理。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="brocade-patterns">
+        <div class="container">
+            <h2>经典图案</h2>
+            <p>南京云锦的图案丰富多彩，寓意吉祥如意，展现了中国传统文化的博大精深。</p>
+            
+            <div class="patterns-grid">
+                <div class="pattern-item">
+                    <h3>龙纹</h3>
+                    <p>龙是中国传统文化中的吉祥象征，代表着权力和尊贵。</p>
+                </div>
+                <div class="pattern-item">
+                    <h3>凤纹</h3>
+                    <p>凤是中国传统文化中的吉祥象征，代表着美丽和幸福。</p>
+                </div>
+                <div class="pattern-item">
+                    <h3>牡丹</h3>
+                    <p>牡丹是中国传统文化中的吉祥象征，代表着富贵和繁荣。</p>
+                </div>
+                <div class="pattern-item">
+                    <h3>祥云</h3>
+                    <p>祥云是中国传统文化中的吉祥象征，代表着吉祥和好运。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="brocade-drawing">
+        <div class="brocade-container">
+            <div class="brocade-main">
+                <div class="canvas-area">
+                    <canvas id="draw-canvas" width="600" height="600"></canvas>
+                </div>
+                <div class="tool-area">
+                    <h3>你的涂鸦</h3>
+                    <div class="color-picker">
+                        <div class="color-option" data-color="#9D2933" style="background:#9D2933"></div>
+                        <div class="color-option" data-color="#1E4460" style="background:#1E4460"></div>
+                        <div class="color-option" data-color="#D4AF37" style="background:#D4AF37"></div>
+                        <div class="color-option" data-color="#2E5A4C" style="background:#2E5A4C"></div>
+                        <div class="color-option" data-color="#4A2E2E" style="background:#4A2E2E"></div>
+                    </div>
+                    <div class="brush-size">
+                        <label for="size-slider" class="visually-hidden">画笔大小</label>
+                        <input type="range" id="size-slider" min="2" max="30" value="20" title="画笔大小" placeholder="画笔大小">
+                        <span id="size-value">20px</span>
+                    </div>
+                    <button id="clear-btn">清空画布</button>
+                    <button id="generate-btn">生成云锦</button>
+                </div>
+            </div>
+            <div id="result-area" style="display:none">
+                <h3>生成结果</h3>
+                <div id="result-display"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="brocade-experience">
+        <div class="brocade-container">
+            <h2 style="text-align: center; margin-bottom: 2rem; color: var(--brocade-red);">绘画体验云锦纹样</h2>
+            <div class="experience-main">
+                <div class="experience-canvas-area">
+                    <canvas id="experience-draw-canvas" width="800" height="600"></canvas>
+                    <div id="experience-loading-indicator" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.7); padding: 20px; border-radius: 8px;">
+                        <p style="color: white;">正在加载资源...</p>
+                    </div>
+                </div>
+                <div class="experience-tool-area">
+                    <h3>绘画工具</h3>
+                    
+                    <div class="experience-color-picker">
+                        <div class="experience-color-option" data-color="#FF0000" style="background:#FF0000" title="红色">
+                            <span class="color-label">红色</span>
+                        </div>
+                        <div class="experience-color-option" data-color="#0000FF" style="background:#0000FF" title="蓝色">
+                            <span class="color-label">蓝色</span>
+                        </div>
+                        <div class="experience-color-option" data-color="#8B4513" style="background:#8B4513" title="棕色">
+                            <span class="color-label">棕色</span>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-brush-size">
+                        <label for="experience-size-slider">画笔大小：<span id="experience-size-value">10</span>px</label>
+                        <input type="range" id="experience-size-slider" min="1" max="20" value="10">
+                    </div>
+                    
+                    <div class="experience-area-info">
+                        <h4>颜色面积统计</h4>
+                        <div class="area-stats">
+                            <div class="area-stat">
+                                <span class="area-color-indicator" style="background:#FF0000"></span>
+                                <span>红色：<span id="red-area">0</span> px²</span>
+                            </div>
+                            <div class="area-stat">
+                                <span class="area-color-indicator" style="background:#0000FF"></span>
+                                <span>蓝色：<span id="blue-area">0</span> px²</span>
+                            </div>
+                            <div class="area-stat">
+                                <span class="area-color-indicator" style="background:#8B4513"></span>
+                                <span>棕色：<span id="brown-area">0</span> px²</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-buttons">
+                        <button id="experience-undo-btn" disabled>撤销</button>
+                        <button id="experience-redo-btn" disabled>重做</button>
+                        <button id="experience-clear-btn">清空画布</button>
+                        <button id="experience-generate-btn">生成云锦纹样</button>
+                    </div>
+                </div>
+            </div>
+            <div id="experience-result-area" style="display:none; margin-top: 2rem;">
+                <h3>生成结果</h3>
+                <div class="experience-result-display">
+                    <img id="experience-generated-image" src="" alt="生成的云锦纹样" style="max-width: 100%; height: auto; border-radius: 8px;">
+                    <div class="experience-result-controls">
+                        <button id="experience-download-btn" style="margin-top: 1rem;">下载图片</button>
+                    </div>
+                </div>
+            </div>
+            <div id="experience-status-message" style="margin-top: 1rem; padding: 1rem; border-radius: 8px; text-align: center; display: none;"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 南京云锦文化互动展示网站. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/brocade.js"></script>
+    <script src="js/yunjin-experience.js"></script>
+</body>
+</html>

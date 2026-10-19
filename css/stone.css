@@ -1,0 +1,294 @@
+.stone-hero {
+  height: 70vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/backgrounds/d01.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: background 0.5s ease-in-out;
+  filter: contrast(1.1) brightness(1.05) saturate(1.1);
+}
+
+.stone-hero .hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: var(--stone-green);
+  text-shadow: 0 2px 10px rgba(92, 122, 107, 0.5);
+}
+
+.stone-hero .hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: var(--text-light);
+}
+
+.stone-intro {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/backgrounds/d02.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  transition: background 0.5s ease-in-out;
+  filter: contrast(1.1) brightness(1.05) saturate(1.1);
+}
+
+.stone-intro h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--stone-green);
+  text-shadow: 0 2px 10px rgba(92, 122, 107, 0.6);
+  transition: all 0.3s ease;
+}
+
+.stone-intro p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  font-size: 1.1rem;
+  color: var(--text-light);
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+}
+
+.stone-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feature-item {
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  border-left: 4px solid var(--stone-green);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(92, 122, 107, 0.3);
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.feature-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--stone-green);
+  transition: all 0.3s ease;
+}
+
+.feature-item p {
+  color: var(--text-light);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+}
+
+.stone-formation {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/images/backgrounds/d03.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  transition: background 0.5s ease-in-out;
+  filter: contrast(1.15) brightness(1.05) saturate(1.15);
+}
+
+.stone-formation h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--stone-green);
+  text-shadow: 0 2px 10px rgba(92, 122, 107, 0.6);
+  transition: all 0.3s ease;
+}
+
+.stone-formation p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  font-size: 1.1rem;
+  color: var(--text-light);
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+}
+
+.formation-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.step-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.step-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(92, 122, 107, 0.2);
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--stone-green);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto 1rem;
+}
+
+.step-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--stone-green);
+}
+
+.stone-appreciation {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/backgrounds/d04.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  transition: background 0.5s ease-in-out;
+  filter: contrast(1.1) brightness(1.05) saturate(1.1);
+}
+
+.stone-appreciation h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--stone-green);
+  text-shadow: 0 2px 10px rgba(92, 122, 107, 0.6);
+  transition: all 0.3s ease;
+}
+
+.stone-appreciation p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  font-size: 1.1rem;
+  color: var(--text-light);
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+}
+
+.appreciation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.appreciation-item {
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  border-top: 4px solid var(--stone-green);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.appreciation-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(92, 122, 107, 0.3);
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.appreciation-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--stone-green);
+  transition: all 0.3s ease;
+}
+
+.appreciation-item p {
+  color: var(--text-light);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .stone-hero {
+    background-attachment: scroll;
+  }
+  
+  .stone-intro {
+    background-attachment: scroll;
+  }
+  
+  .stone-formation {
+    background-attachment: scroll;
+  }
+  
+  .stone-appreciation {
+    background-attachment: scroll;
+  }
+  
+  .stone-hero .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .stone-hero .hero-content p {
+    font-size: 1.1rem;
+  }
+  
+  .stone-intro h2,
+  .stone-formation h2,
+  .stone-appreciation h2 {
+    font-size: 2rem;
+  }
+  
+  .stone-features,
+  .formation-steps,
+  .appreciation-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 优化图片加载性能 */
+@media (prefers-reduced-motion: reduce) {
+  .stone-hero,
+  .stone-intro,
+  .stone-formation,
+  .stone-appreciation {
+    background-attachment: scroll;
+  }
+}
+
+/* 确保背景图在不同屏幕比例下都能良好显示 */
+@media (orientation: portrait) {
+  .stone-hero {
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .stone-intro {
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .stone-formation {
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .stone-appreciation {
+    background-size: cover;
+    background-position: center;
+  }
+}

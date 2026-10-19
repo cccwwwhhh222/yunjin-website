@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文化体验 | 南京云锦</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/experience.css">
+    <script src="https://cdn.jsdelivr.net/npm/stats.js@0.17.0/build/stats.min.js"></script>
+    <script src="js/three-setup.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">金陵云锦</div>
+        <ul class="nav-links">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="brocade.html">云锦</a></li>
+            <li><a href="experience.html" class="active">文化体验</a></li>
+        </ul>
+    </nav>
+
+    <header class="experience-hero">
+        <div class="hero-content">
+            <h1>文化体验</h1>
+            <p>沉浸式感受南京云锦的魅力</p>
+        </div>
+    </header>
+
+    <section class="experience-intro">
+        <div class="container">
+            <h2>体验简介</h2>
+            <p>文化体验页面旨在为用户提供一个沉浸式的南京云锦文化体验平台。通过互动式的展示和参与，让用户更深入地了解南京云锦的历史、工艺和文化内涵。</p>
+        </div>
+    </section>
+
+    <section class="experience-features">
+        <div class="container">
+            <h2>体验功能</h2>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>虚拟工艺体验</h3>
+                    <p>通过虚拟技术，体验金箔、云锦、雨花石的制作过程，感受传统工艺的魅力。</p>
+                </div>
+                <div class="feature-item">
+                    <h3>文化互动游戏</h3>
+                    <p>参与文化互动游戏，在娱乐中学习南京三宝的相关知识。</p>
+                </div>
+                <div class="feature-item">
+                    <h3>线上展览</h3>
+                    <p>浏览南京云锦的精品展览，欣赏珍贵的文化遗产。</p>
+                </div>
+                <div class="feature-item">
+                    <h3>文化社区</h3>
+                    <p>加入文化社区，与其他爱好者交流分享南京三宝的相关内容。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience-drawing">
+        <div class="container">
+            <h2>交互式绘画体验</h2>
+            <p>在画布上创作，系统将根据您绘画内容生成对应的文化图片。</p>
+            
+            <div class="drawing-container">
+                <div class="canvas-area">
+                    <canvas id="drawingCanvas" width="800" height="400"></canvas>
+                </div>
+                <div class="tool-area">
+                    <h3>绘画工具</h3>
+                    <div class="color-picker">
+                        <div class="color-btn active" data-color="#FF0000" style="background:#FF0000"></div>
+                        <div class="color-btn" data-color="#D4AF37" style="background:#D4AF37"></div>
+                        <div class="color-btn" data-color="#228B22" style="background:#228B22"></div>
+                        <div class="color-btn" data-color="#87CEEB" style="background:#87CEEB"></div>
+                        <div class="color-btn" data-color="#808080" style="background:#808080"></div>
+                    </div>
+                    <div class="brush-size">
+                        <label>画笔粗细</label>
+                        <input type="range" id="brushSize" min="2" max="30" value="13" title="画笔粗细" placeholder="画笔粗细">
+                        <span id="sizeValue">13</span>
+                    </div>
+                    <button id="clearCanvas">清空画布</button>
+                    <button id="generateImage">生成图片</button>
+                </div>
+            </div>
+            
+            <div class="result-area">
+                <h3>生成结果</h3>
+                <div class="result-content">
+                    <div id="loadingIndicator" style="display:none">
+                        <p>正在生成图片...</p>
+                        <div class="loading-bar"></div>
+                    </div>
+                    <img id="resultImage" style="display:none; max-width: 100%; height: auto; cursor: pointer;" alt="生成结果">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 全屏查看覆盖层 -->
+    <div id="fullscreenOverlay" class="fullscreen-overlay" style="display:none">
+        <button id="closeFullscreen" class="close-fullscreen">&times;</button>
+        <img id="fullscreenImage" class="fullscreen-image" alt="全屏查看">
+    </div>
+
+    <section class="experience-audio-visualization">
+        <div class="container">
+            <h2>声音可视化体验</h2>
+            <p>通过声音的可视化效果，感受南京三宝文化的韵律与美感。</p>
+            
+            <div class="audio-visualization-container">
+                <div class="visualization-content">
+                    <div class="video-wrapper">
+                        <video id="audioVisualizationVideo" controls muted>
+                            <source src="assets/m1.mp4" type="video/mp4">
+                            您的浏览器不支持视频播放
+                        </video>
+                        <canvas id="visualizationCanvas"></canvas>
+                    </div>
+                    <div class="controls">
+                        <button id="playPauseBtn">播放</button>
+                        <input type="range" id="progressBar" min="0" max="100" value="0">
+                        <span id="timeDisplay">0:00 / 0:00</span>
+                        <button id="fullscreenBtn">全屏</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience-placeholder">
+        <div class="container">
+            <h2>更多功能开发中</h2>
+            <p>文化体验页面的其他功能正在开发中，敬请期待。</p>
+            <div class="placeholder-content">
+                <p>未来将为您提供更多精彩的文化体验功能，包括：</p>
+                <ul>
+                    <li>3D虚拟博物馆</li>
+                    <li>文化知识竞赛</li>
+                    <li>用户创作分享</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 南京云锦文化互动展示网站. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/experience.js"></script>
+</body>
+</html>
